@@ -27,6 +27,9 @@
 		FF972A6E29AAAFF700C62461 /* OpponentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6829AAAFF700C62461 /* OpponentItem.swift */; };
 		FF972A6F29AAAFF700C62461 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6929AAAFF700C62461 /* Match.swift */; };
 		FF972A7229AAB08400C62461 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF972A7129AAB08400C62461 /* Alamofire */; };
+		FF972A7529AAB0E800C62461 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7429AAB0E800C62461 /* Webservice.swift */; };
+		FF972A7929AAB27D00C62461 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7729AAB27D00C62461 /* MatchTableViewCell.swift */; };
+		FF972A7A29AAB27D00C62461 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		FF972A6729AAAFF700C62461 /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		FF972A6829AAAFF700C62461 /* OpponentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentItem.swift; sourceTree = "<group>"; };
 		FF972A6929AAAFF700C62461 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		FF972A7429AAB0E800C62461 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		FF972A7729AAB27D00C62461 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		FF1A745329AA9C6D003AC412 /* CSGOTV */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A7329AAB0D200C62461 /* Services */,
 				FF972A6329AAAF9B00C62461 /* Models */,
 				FF972A6129AAA6BE00C62461 /* Core */,
 				FF972A6029AAA6B900C62461 /* Features */,
@@ -168,6 +175,7 @@
 		FF1A749329AAA1E2003AC412 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A7629AAB25200C62461 /* Cells */,
 				FF1A748529AA9DA4003AC412 /* MatchesViewController.swift */,
 				FF1A748629AA9DA4003AC412 /* MatchesViewController.xib */,
 			);
@@ -221,6 +229,23 @@
 				FF972A6429AAAFF700C62461 /* Tournament.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FF972A7329AAB0D200C62461 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A7429AAB0E800C62461 /* Webservice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF972A7629AAB25200C62461 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A7729AAB27D00C62461 /* MatchTableViewCell.swift */,
+				FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +361,7 @@
 				FF1A748829AA9DA4003AC412 /* MatchesViewController.xib in Resources */,
 				FF1A746129AA9C6F003AC412 /* LaunchScreen.storyboard in Resources */,
 				FF1A745E29AA9C6F003AC412 /* Assets.xcassets in Resources */,
+				FF972A7A29AAB27D00C62461 /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +393,9 @@
 				FF1A745529AA9C6D003AC412 /* AppDelegate.swift in Sources */,
 				FF1A748729AA9DA4003AC412 /* MatchesViewController.swift in Sources */,
 				FF972A6D29AAAFF700C62461 /* Serie.swift in Sources */,
+				FF972A7929AAB27D00C62461 /* MatchTableViewCell.swift in Sources */,
 				FF972A6E29AAAFF700C62461 /* OpponentItem.swift in Sources */,
+				FF972A7529AAB0E800C62461 /* Webservice.swift in Sources */,
 				FF1A745729AA9C6D003AC412 /* SceneDelegate.swift in Sources */,
 				FF972A6F29AAAFF700C62461 /* Match.swift in Sources */,
 				FF1A749129AAA032003AC412 /* BaseCoordinator.swift in Sources */,

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchesViewController" customModule="CSGOTV" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="psI-Xa-aCM" id="9hd-SX-OdV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="psI-Xa-aCM">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="116.79389312977099" y="20.422535211267608"/>
+            <constraints>
+                <constraint firstItem="psI-Xa-aCM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Btw-JN-bQn"/>
+                <constraint firstItem="psI-Xa-aCM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QXI-T6-Scy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="psI-Xa-aCM" secondAttribute="bottom" id="Wst-2G-Pp1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="psI-Xa-aCM" secondAttribute="trailing" id="X9y-ha-qWV"/>
+            </constraints>
+            <point key="canvasLocation" x="127" y="20"/>
         </view>
     </objects>
 </document>

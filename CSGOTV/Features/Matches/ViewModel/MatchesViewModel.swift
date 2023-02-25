@@ -8,7 +8,26 @@
 import Foundation
 
 class MatchesViewModel {
-       
-    init() {}
+    let webservice: WebService
+    var matches: [Match] = []
+    var dataFound: (() -> ())?
+
+    init(webservice: WebService) {
+        self.webservice = webservice
+    }
+    
+    func fetchMatches() {
+        webservice.getMatches { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let matches):
+                    self?.matches = matches
+                    self?.dataFound?()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
 
 }

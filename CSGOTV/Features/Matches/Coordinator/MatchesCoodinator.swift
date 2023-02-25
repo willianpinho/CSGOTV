@@ -8,7 +8,7 @@
 import UIKit
 
 class MatchesCoordinator: BaseCoordinator {
-    private var viewModel: MatchesViewModel!
+    private var viewModel: MatchesViewModel = MatchesViewModel(webservice: WebService())
     
     override func start() {
         let matchesViewController = MatchesViewController()
