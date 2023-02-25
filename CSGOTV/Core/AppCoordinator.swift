@@ -9,9 +9,11 @@ import UIKit
 
 class AppCoordinator: BaseCoordinator {
     private var window: UIWindow
+    private unowned var sceneDelegate: SceneDelegate
     
-    init(_ window: UIWindow) {
+    init(_ window: UIWindow, sceneDelegate: SceneDelegate) {
         self.window = window
+        self.sceneDelegate = sceneDelegate
     }
     
     override func start() {

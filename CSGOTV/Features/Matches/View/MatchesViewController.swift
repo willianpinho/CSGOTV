@@ -21,5 +21,6 @@ extension MatchesViewController {
     private func setupUI() {
         navigationItem.title = "Matches"
         navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
