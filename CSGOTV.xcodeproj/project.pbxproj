@@ -20,6 +20,13 @@
 		FF1A748E29AA9DDF003AC412 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A748D29AA9DDF003AC412 /* AppCoordinator.swift */; };
 		FF1A749129AAA032003AC412 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A749029AAA032003AC412 /* BaseCoordinator.swift */; };
 		FF1A749629AAA22A003AC412 /* MatchesCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A749529AAA22A003AC412 /* MatchesCoodinator.swift */; };
+		FF972A6A29AAAFF700C62461 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6429AAAFF700C62461 /* Tournament.swift */; };
+		FF972A6B29AAAFF700C62461 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6529AAAFF700C62461 /* Opponent.swift */; };
+		FF972A6C29AAAFF700C62461 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6629AAAFF700C62461 /* League.swift */; };
+		FF972A6D29AAAFF700C62461 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6729AAAFF700C62461 /* Serie.swift */; };
+		FF972A6E29AAAFF700C62461 /* OpponentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6829AAAFF700C62461 /* OpponentItem.swift */; };
+		FF972A6F29AAAFF700C62461 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A6929AAAFF700C62461 /* Match.swift */; };
+		FF972A7229AAB08400C62461 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF972A7129AAB08400C62461 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,12 @@
 		FF1A748D29AA9DDF003AC412 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FF1A749029AAA032003AC412 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FF1A749529AAA22A003AC412 /* MatchesCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoodinator.swift; sourceTree = "<group>"; };
+		FF972A6429AAAFF700C62461 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		FF972A6529AAAFF700C62461 /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		FF972A6629AAAFF700C62461 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		FF972A6729AAAFF700C62461 /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		FF972A6829AAAFF700C62461 /* OpponentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentItem.swift; sourceTree = "<group>"; };
+		FF972A6929AAAFF700C62461 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF972A7229AAB08400C62461 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +121,7 @@
 		FF1A745329AA9C6D003AC412 /* CSGOTV */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A6329AAAF9B00C62461 /* Models */,
 				FF972A6129AAA6BE00C62461 /* Core */,
 				FF972A6029AAA6B900C62461 /* Features */,
 				FF1A745D29AA9C6F003AC412 /* Assets.xcassets */,
@@ -195,6 +210,19 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		FF972A6329AAAF9B00C62461 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A6629AAAFF700C62461 /* League.swift */,
+				FF972A6929AAAFF700C62461 /* Match.swift */,
+				FF972A6529AAAFF700C62461 /* Opponent.swift */,
+				FF972A6829AAAFF700C62461 /* OpponentItem.swift */,
+				FF972A6729AAAFF700C62461 /* Serie.swift */,
+				FF972A6429AAAFF700C62461 /* Tournament.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +239,9 @@
 			dependencies = (
 			);
 			name = CSGOTV;
+			packageProductDependencies = (
+				FF972A7129AAB08400C62461 /* Alamofire */,
+			);
 			productName = CSGOTV;
 			productReference = FF1A745129AA9C6D003AC412 /* CSGOTV.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +314,9 @@
 				Base,
 			);
 			mainGroup = FF1A744829AA9C6D003AC412;
+			packageReferences = (
+				FF972A7029AAB08400C62461 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FF1A745229AA9C6D003AC412 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,13 +360,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF972A6A29AAAFF700C62461 /* Tournament.swift in Sources */,
 				FF1A748E29AA9DDF003AC412 /* AppCoordinator.swift in Sources */,
 				FF1A749629AAA22A003AC412 /* MatchesCoodinator.swift in Sources */,
 				FF1A748B29AA9DBA003AC412 /* MatchesViewModel.swift in Sources */,
 				FF1A745529AA9C6D003AC412 /* AppDelegate.swift in Sources */,
 				FF1A748729AA9DA4003AC412 /* MatchesViewController.swift in Sources */,
+				FF972A6D29AAAFF700C62461 /* Serie.swift in Sources */,
+				FF972A6E29AAAFF700C62461 /* OpponentItem.swift in Sources */,
 				FF1A745729AA9C6D003AC412 /* SceneDelegate.swift in Sources */,
+				FF972A6F29AAAFF700C62461 /* Match.swift in Sources */,
 				FF1A749129AAA032003AC412 /* BaseCoordinator.swift in Sources */,
+				FF972A6C29AAAFF700C62461 /* League.swift in Sources */,
+				FF972A6B29AAAFF700C62461 /* Opponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,11 +539,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UT4W7MMEML;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSGOTV/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -528,11 +570,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UT4W7MMEML;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSGOTV/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -668,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF972A7029AAB08400C62461 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF972A7129AAB08400C62461 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF972A7029AAB08400C62461 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF1A744929AA9C6D003AC412 /* Project object */;
 }
