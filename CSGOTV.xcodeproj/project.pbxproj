@@ -30,6 +30,8 @@
 		FF972A7529AAB0E800C62461 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7429AAB0E800C62461 /* Webservice.swift */; };
 		FF972A7929AAB27D00C62461 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7729AAB27D00C62461 /* MatchTableViewCell.swift */; };
 		FF972A7A29AAB27D00C62461 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */; };
+		FF972A7D29AAD40D00C62461 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */; };
+		FF972A7F29AAD9A400C62461 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		FF972A7429AAB0E800C62461 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		FF972A7729AAB27D00C62461 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		FF1A745329AA9C6D003AC412 /* CSGOTV */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A7B29AAD3F600C62461 /* Extensions */,
 				FF972A7329AAB0D200C62461 /* Services */,
 				FF972A6329AAAF9B00C62461 /* Models */,
 				FF972A6129AAA6BE00C62461 /* Core */,
@@ -246,6 +251,15 @@
 				FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FF972A7B29AAD3F600C62461 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */,
+				FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +402,7 @@
 			files = (
 				FF972A6A29AAAFF700C62461 /* Tournament.swift in Sources */,
 				FF1A748E29AA9DDF003AC412 /* AppCoordinator.swift in Sources */,
+				FF972A7D29AAD40D00C62461 /* UIView+Extension.swift in Sources */,
 				FF1A749629AAA22A003AC412 /* MatchesCoodinator.swift in Sources */,
 				FF1A748B29AA9DBA003AC412 /* MatchesViewModel.swift in Sources */,
 				FF1A745529AA9C6D003AC412 /* AppDelegate.swift in Sources */,
@@ -400,6 +415,7 @@
 				FF972A6F29AAAFF700C62461 /* Match.swift in Sources */,
 				FF1A749129AAA032003AC412 /* BaseCoordinator.swift in Sources */,
 				FF972A6C29AAAFF700C62461 /* League.swift in Sources */,
+				FF972A7F29AAD9A400C62461 /* UIImageView+Extension.swift in Sources */,
 				FF972A6B29AAAFF700C62461 /* Opponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
