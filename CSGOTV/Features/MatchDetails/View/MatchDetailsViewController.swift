@@ -19,6 +19,9 @@ class MatchDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(
+            UINib(nibName: PlayersRowTableViewCell.identifier, bundle: nil),
+            forCellReuseIdentifier: PlayersRowTableViewCell.identifier)
         setupUI()
         setupData()
     }
@@ -36,6 +39,12 @@ extension MatchDetailsViewController {
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationController?.navigationBar.backItem?.title = ""
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 55
+        tableView.separatorStyle = .none
     }
     
     private func setupData() {
@@ -47,5 +56,30 @@ extension MatchDetailsViewController {
         
         guard let currentDate = match?.begin_at else { return }
         timeLabel.text = Date.formatDate(date: currentDate)
+    }
+}
+
+extension MatchDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: PlayersRowTableViewCell.identifier, for: indexPath) as? PlayersRowTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
