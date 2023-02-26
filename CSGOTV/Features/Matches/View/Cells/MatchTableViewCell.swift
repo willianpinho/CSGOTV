@@ -52,7 +52,7 @@ class MatchTableViewCell: UITableViewCell {
             statusView.backgroundColor = UIColor(red: 0.957, green: 0.165, blue: 0.208, alpha: 1)
         } else {
             guard let currentDate = model.begin_at else { return }
-            statusLabel.text = formatDate(date: currentDate)
+            statusLabel.text = Date.formatDate(date: currentDate)
             statusView.backgroundColor = UIColor(red: 0.979, green: 0.979, blue: 0.979, alpha: 0.2)
         }
     }
@@ -61,14 +61,5 @@ class MatchTableViewCell: UITableViewCell {
         image.layer.cornerRadius = image.frame.height/2
         image.layer.masksToBounds = false
         image.clipsToBounds = true
-    }
-    
-    func formatDate(date: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d, h:mm a"
-        let dateFromStr: Date = dateFormatter.date(from: date) ?? Date()
-
-        return dateFormatter.string(from: dateFromStr)
-    }
-    
+    }    
 }

@@ -10,6 +10,7 @@ import Foundation
 class MatchesViewModel {
     let webservice: WebService
     var matches: [Match] = []
+    let matchesItemSelected = DelegateView<Match>()
     var dataFound: (() -> ())?
 
     init(webservice: WebService) {

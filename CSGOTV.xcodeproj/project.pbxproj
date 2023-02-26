@@ -32,6 +32,12 @@
 		FF972A7A29AAB27D00C62461 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */; };
 		FF972A7D29AAD40D00C62461 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */; };
 		FF972A7F29AAD9A400C62461 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */; };
+		FF972A8529ABB71F00C62461 /* MatchDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A8429ABB71F00C62461 /* MatchDetailCoordinator.swift */; };
+		FF972A8829ABB73E00C62461 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A8629ABB73E00C62461 /* MatchDetailsViewController.swift */; };
+		FF972A8929ABB73E00C62461 /* MatchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF972A8729ABB73E00C62461 /* MatchDetailsViewController.xib */; };
+		FF972A8B29ABB74F00C62461 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A8A29ABB74F00C62461 /* MatchDetailsViewModel.swift */; };
+		FF972A8D29ABBA3600C62461 /* DelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A8C29ABBA3600C62461 /* DelegateView.swift */; };
+		FF972A9029AC0A0900C62461 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF972A8F29AC0A0900C62461 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,12 @@
 		FF972A7829AAB27D00C62461 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FF972A8429ABB71F00C62461 /* MatchDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailCoordinator.swift; sourceTree = "<group>"; };
+		FF972A8629ABB73E00C62461 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		FF972A8729ABB73E00C62461 /* MatchDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchDetailsViewController.xib; sourceTree = "<group>"; };
+		FF972A8A29ABB74F00C62461 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
+		FF972A8C29ABBA3600C62461 /* DelegateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateView.swift; sourceTree = "<group>"; };
+		FF972A8F29AC0A0900C62461 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 		FF1A745329AA9C6D003AC412 /* CSGOTV */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A8E29AC09ED00C62461 /* Utils */,
 				FF972A7B29AAD3F600C62461 /* Extensions */,
 				FF972A7329AAB0D200C62461 /* Services */,
 				FF972A6329AAAF9B00C62461 /* Models */,
@@ -198,6 +211,7 @@
 		FF972A6029AAA6B900C62461 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FF972A8029ABB6F100C62461 /* MatchDetails */,
 				FF1A748429AA9D7C003AC412 /* Matches */,
 			);
 			path = Features;
@@ -258,8 +272,52 @@
 			children = (
 				FF972A7C29AAD40D00C62461 /* UIView+Extension.swift */,
 				FF972A7E29AAD9A400C62461 /* UIImageView+Extension.swift */,
+				FF972A8F29AC0A0900C62461 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF972A8029ABB6F100C62461 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A8329ABB70E00C62461 /* ViewModel */,
+				FF972A8229ABB70900C62461 /* View */,
+				FF972A8129ABB70300C62461 /* Coordinator */,
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
+		FF972A8129ABB70300C62461 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A8429ABB71F00C62461 /* MatchDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FF972A8229ABB70900C62461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A8629ABB73E00C62461 /* MatchDetailsViewController.swift */,
+				FF972A8729ABB73E00C62461 /* MatchDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF972A8329ABB70E00C62461 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A8A29ABB74F00C62461 /* MatchDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF972A8E29AC09ED00C62461 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FF972A8C29ABBA3600C62461 /* DelegateView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +432,7 @@
 			files = (
 				FF1A748829AA9DA4003AC412 /* MatchesViewController.xib in Resources */,
 				FF1A746129AA9C6F003AC412 /* LaunchScreen.storyboard in Resources */,
+				FF972A8929ABB73E00C62461 /* MatchDetailsViewController.xib in Resources */,
 				FF1A745E29AA9C6F003AC412 /* Assets.xcassets in Resources */,
 				FF972A7A29AAB27D00C62461 /* MatchTableViewCell.xib in Resources */,
 			);
@@ -401,16 +460,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF972A6A29AAAFF700C62461 /* Tournament.swift in Sources */,
+				FF972A8B29ABB74F00C62461 /* MatchDetailsViewModel.swift in Sources */,
+				FF972A9029AC0A0900C62461 /* Date+Extension.swift in Sources */,
 				FF1A748E29AA9DDF003AC412 /* AppCoordinator.swift in Sources */,
 				FF972A7D29AAD40D00C62461 /* UIView+Extension.swift in Sources */,
+				FF972A8D29ABBA3600C62461 /* DelegateView.swift in Sources */,
 				FF1A749629AAA22A003AC412 /* MatchesCoodinator.swift in Sources */,
 				FF1A748B29AA9DBA003AC412 /* MatchesViewModel.swift in Sources */,
 				FF1A745529AA9C6D003AC412 /* AppDelegate.swift in Sources */,
 				FF1A748729AA9DA4003AC412 /* MatchesViewController.swift in Sources */,
 				FF972A6D29AAAFF700C62461 /* Serie.swift in Sources */,
+				FF972A8829ABB73E00C62461 /* MatchDetailsViewController.swift in Sources */,
 				FF972A7929AAB27D00C62461 /* MatchTableViewCell.swift in Sources */,
 				FF972A6E29AAAFF700C62461 /* OpponentItem.swift in Sources */,
 				FF972A7529AAB0E800C62461 /* Webservice.swift in Sources */,
+				FF972A8529ABB71F00C62461 /* MatchDetailCoordinator.swift in Sources */,
 				FF1A745729AA9C6D003AC412 /* SceneDelegate.swift in Sources */,
 				FF972A6F29AAAFF700C62461 /* Match.swift in Sources */,
 				FF1A749129AAA032003AC412 /* BaseCoordinator.swift in Sources */,
